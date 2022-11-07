@@ -1,0 +1,235 @@
+---
+title: "Como os diferentes tipos de vegetação respondem à chuva nos diferentes biomas"
+subtitle: "Dados do Dexter"
+author: "Marcio Baldissera Cure - Bernardo Monteiro Flores - Rafael Silva Oliveira - (...) - Marina Hirota"
+institute: "PPG Ecologia, UFSC"
+date: "`r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    chakra: libs/remark-latest.min.js
+    css: ["uo", "rutgers-fonts", "marcio.css"]
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+class: top, left
+
+```{r xaringan-logo, echo=FALSE, include=TRUE}
+xaringanExtra::use_logo(image_url = "https://ipes.ufsc.br/wp-content/themes/ipes-v1/images/logotipo.png")
+```
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+```{r webcam, echo=FALSE, include= TRUE}
+xaringanExtra::use_webcam()
+```
+
+```{r xaringan_themes, echo = FALSE, include=FALSE}
+	names(xaringan:::list_css())
+```
+
+```{r broadcast, echo=FALSE}
+xaringanExtra::use_broadcast()
+```
+
+## Savanas e Florestas na região tropical
+
+- São estados alternativos em termos de estrutura da vegetação (cobertura do dossel) determinados parcialmente pela PMA. 
+
+```{r figure1, include=TRUE, echo=FALSE, out.width="60%", fig.align='center', fig.pos='bottom', fig.cap="Hirota et al (2011) Science"}
+knitr::include_graphics("hirota.jpg")
+```
+
+
+---
+# Há diferentes tipos funcionais de Florestas
+
+.center[
+<img width="74%" src="https://www.frontiersin.org/files/Articles/391790/fevo-06-00104-HTML-r1/image_m/fevo-06-00104-g001.jpg"/>
+
+*Dexter et al., 2018*
+  ]
+  
+
+---
+
+class: top, left
+# Sob o mesmo regime de precipitação...
+
+- __Savannas__ e __florestas__ dividem a mesma paisagem e sua distribuição é determinada pelo regime de fogo, disponibilidade de água e características do solo.  *Ferreira et al (2007); Dantas et al (2016); Veenendaal et al (2018); Pausas et al (2020); Bernardino et al (2021)*
+
+
+...que são determinados pelos Feedbacks entre a vegetação e o meio abiótico. (Frequentemente baseado na estrutura da vegetação)
+
+.center[
+<img width="54%" src="staalflores.png"/>
+
+*Staal & Flores (2015)*
+  ]
+  
+---
+class: top, left
+
+# Tentamos diferenciar estes tipos de vegetação funcionalmente
+
+- Produtividade primária como um proxy do funcionamento da vegetação
+
+- Produção primária bruta é uma função básica para os ecossistemas e pode ser inferida por índices derivados de imagens de satélite *Biudes et al (2021)*.
+
+.center[
+
+<img width="70%" src="biudes2021.png"/>
+
+]
+
+---
+# Na escala da paisagem (no Cerrado)
+
+### EVI2 médio não diferencia as florestas
+
+.center[
+<img width="50%" src="2_a.png"/>
+
+*Cure et al (Em revisão)*
+  ]
+
+
+---
+
+# O tree cover tb não!
+
+
+.center[
+<img width="90%" src="SM_1.png"/>
+
+*Cure et al (Em revisão)*
+]
+
+
+---
+# A altura das árvores tb não!
+
+.center[
+<img width="40%" src="2_b.png"/> <img width="40%" src="xu2016.png"/>
+
+*Cure et al (Em revisão); Xu et al. (2016)*
+  ]
+
+
+---
+# A área basal tb não!
+
+.center[
+<img width="40%" src="2_c.png"/><img width="25%" src="dantas20215_fig_1.png"/>
+
+*Cure et al (Em revisão); Dantas et al. (2015)*
+  ]
+
+---
+# Na mesma paisagem, existe diferença da resposta dessas vegetações às oscilações sazonais da chuva!
+
+.center[
+<img width="50%" src="2_e.png"/>
+
+*Cure et al (Em revisão)*
+  ]
+
+
+---
+# Na mesma paisagem, existe diferença da resposta dessas vegetações às oscilações sazonais da chuva!
+
+.center[
+<img width="50%" src="SM_11.png"/>
+
+*Cure et al (Em revisão)*
+  ]
+
+---
+## O que determina essas respostas?
+
+### Pela heterogeneidade de condições ambientais
+
+.center[
+<img width="54%" src="Figure_2.png"/>
+
+*Cure et al (Em revisão)*
+  ]
+
+
+---
+# Em resumo:
+
+.center[
+<img width="70%" src="graphical abstract STOTEN_1.png"/>
+
+*Cure et al (Em revisão)*  ]
+
+
+---
+## Como diferentes tipos de vegetação respondem à mudanças na chuva nos diferentes Biomas?
+
+- Usei NDVI (baseado no Landsat8) e chuva do Chirps
+
+- Pontos usados no Dexter et al. (2018)
+
+- Correlação de Kendall entre as séries de NDVI e chuva
+
+.center[
+<img width="64%" src="mapa_capII.png"/>
+
+*Dados de Dexter et al., 2018*  ]
+  
+---
+# Completei os NAs na série de NDVI
+
+### Qual a melhor abordagem?
+
+.center[
+<img width="74%" src="qual.png"/>
+]
+
+---
+# Exemplo das séries de chuva e NDVI
+
+.center[
+<img width="100%" src="noano.png"/>
+]
+
+---
+# Distribuição da resposta
+
+.center[
+<img width="80%" src="Figure_histogram_dexter_menor.png"/>
+]
+---
+# Acoplamento e Lag na maior resposta por Cluster do Dexter
+
+.center[
+<img width="80%" src="Figure_boxplot_coup_lag_dexter_menor.png"/>
+]
+---
+# Acoplamento e Lag na maior resposta por Bioma
+
+.center[
+<img width="80%" src="Figure_boxplot_domain_coup_lag_dexter_menor.png"/>
+]
+
+---
+# Resposta em relação ao MAP e CWD
+
+<img width="90%" src="response_map_cwv.png"/>
+---
+# Ciclo anual
+
+### Exemplo: Uma parcela em cada Bioma
+
+
+.center[
+<img width="34%" src="ciclo_anual_cerr1.png"/>
+<img width="34%" src="ciclo_anual_amaz1.png"/>
+<img width="34%" src="ciclo_anual_cerrado1.png"/>
+]
